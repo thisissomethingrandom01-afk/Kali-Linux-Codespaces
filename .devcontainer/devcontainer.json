@@ -8,7 +8,7 @@
       "configureZshAsDefaultShell": true
     }
   },
- 
-  "onCreateCommand": "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y kali-linux-default",
+ "onCreateCommand": "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y kali-tools-top10",
+  "postCreateCommand": "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y kali-linux-default &",
   "remoteUser": "root"
 }
