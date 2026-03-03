@@ -2,14 +2,13 @@
   "name": "Kali Linux",
   "image": "kalilinux/kali-rolling:latest",
   "features": {
+    "ghcr.io/devcontainers/features/sshd:1": "latest",
     "ghcr.io/devcontainers/features/common-utils:1": {
       "installZsh": true,
       "configureZshAsDefaultShell": true
-    },
-    "ghcr.io/devcontainers/features/sshd:1": {
-      "version": "latest"
     }
   },
-  "postCreateCommand": "apt-get update && apt-get install -y kali-linux-headless",
+ 
+  "onCreateCommand": "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y kali-linux-default",
   "remoteUser": "root"
 }
